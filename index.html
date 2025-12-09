@@ -1,43 +1,58 @@
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tic Tac Toe</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Data Structure Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<main class="container">
-<h1>Tic Tac Toe</h1>
-<section class="game">
-<div class="board" id="board">
-<button class="cell" data-index="0"></button>
-<button class="cell" data-index="1"></button>
-<button class="cell" data-index="2"></button>
-<button class="cell" data-index="3"></button>
-<button class="cell" data-index="4"></button>
-<button class="cell" data-index="5"></button>
-<button class="cell" data-index="6"></button>
-<button class="cell" data-index="7"></button>
-<button class="cell" data-index="8"></button>
-</div>
-<div class="panel">
-<div id="status" class="status">Player X's turn</div>
-<div class="controls">
-<button id="restart">Restart</button>
-<button id="aiToggle">Play vs CPU</button>
-<select id="firstPlayer">
-<option value="X">X starts</option>
-<option value="O">O starts</option>
-</select>
-</div>
-<div class="scores">
-<div>X: <span id="scoreX">0</span></div>
-<div>O: <span id="scoreO">0</span></div>
-<div>Draws: <span id="scoreD">0</span></div>
-</div>
-</div>
-</section>
-</main>
-<script type="module" src="main.js"></script>
+  <main class="wrap">
+    <h1>Data Structure Visualizer</h1>
+
+    <section class="controls-grid">
+      <div class="card">
+        <h2>Array</h2>
+        <div class="controls">
+          <input id="arrayValue" placeholder="value" />
+          <button id="arrPush">push</button>
+          <button id="arrPop">pop</button>
+          <button id="arrUnshift">unshift</button>
+          <button id="arrShift">shift</button>
+          <button id="arrClear">clear</button>
+        </div>
+        <div class="visual" id="arrayVis" aria-live="polite"></div>
+      </div>
+
+      <div class="card">
+        <h2>Stack (LIFO)</h2>
+        <div class="controls">
+          <input id="stackValue" placeholder="value" />
+          <button id="stackPush">push</button>
+          <button id="stackPop">pop</button>
+          <button id="stackClear">clear</button>
+        </div>
+        <div class="visual stack-visual" id="stackVis" aria-live="polite"></div>
+      </div>
+
+      <div class="card">
+        <h2>Queue (FIFO)</h2>
+        <div class="controls">
+          <input id="queueValue" placeholder="value" />
+          <button id="queueEnq">enqueue</button>
+          <button id="queueDeq">dequeue</button>
+          <button id="queueClear">clear</button>
+        </div>
+        <div class="visual queue-visual" id="queueVis" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="logcard">
+      <h3>Operations Log</h3>
+      <ul id="log"></ul>
+    </section>
+  </main>
+
+  <script src="app.js" type="module"></script>
 </body>
 </html>
