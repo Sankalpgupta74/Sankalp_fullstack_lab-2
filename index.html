@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tic Tac Toe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+<h1>Tic Tac Toe</h1>
+<section class="game">
+<div class="board" id="board">
+<button class="cell" data-index="0"></button>
+<button class="cell" data-index="1"></button>
+<button class="cell" data-index="2"></button>
+<button class="cell" data-index="3"></button>
+<button class="cell" data-index="4"></button>
+<button class="cell" data-index="5"></button>
+<button class="cell" data-index="6"></button>
+<button class="cell" data-index="7"></button>
+<button class="cell" data-index="8"></button>
+</div>
+<div class="panel">
+<div id="status" class="status">Player X's turn</div>
+<div class="controls">
+<button id="restart">Restart</button>
+<button id="aiToggle">Play vs CPU</button>
+<select id="firstPlayer">
+<option value="X">X starts</option>
+<option value="O">O starts</option>
+</select>
+</div>
+<div class="scores">
+<div>X: <span id="scoreX">0</span></div>
+<div>O: <span id="scoreO">0</span></div>
+<div>Draws: <span id="scoreD">0</span></div>
+</div>
+</div>
+</section>
+</main>
+<script type="module" src="main.js"></script>
+</body>
+</html>
